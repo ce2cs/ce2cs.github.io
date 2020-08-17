@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="learning-learning-git" class="article article-type-learning" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/17/learning-git/" class="article-date">
+  <time datetime="2020-08-17T05:11:34.000Z" itemprop="datePublished">2020-08-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/17/learning-git/">git</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git-Learning-Notes"><a href="#Git-Learning-Notes" class="headerlink" title="Git Learning Notes"></a>Git Learning Notes</h1><p>Reference: <a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">https://www.liaoxuefeng.com/wiki/896043488029600</a></p>
+<h2 id="Create-repository"><a href="#Create-repository" class="headerlink" title="Create repository"></a>Create repository</h2><ul>
+<li><p>Initialize the repository</p>
+<p>Using the command:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git init </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Add a file into the repository</p>
+<ol>
+<li>Using <code>git add</code> to add the file into the repository</li>
+<li>Using <code>git commit</code> to commit added files into repository at a time <ul>
+<li>Don’t forget to add <code>-m &quot;message&quot;</code></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="Time-machine"><a href="#Time-machine" class="headerlink" title="Time machine"></a>Time machine</h2><ul>
+<li><p>Using <code>git diff &lt;filename&gt;</code> to look up modification</p>
+</li>
+<li><p>Press <code>q</code> to quit the diff mode</p>
+</li>
+<li><p><code>git log</code> to look up the log info</p>
+<h3 id="Edition-Recant"><a href="#Edition-Recant" class="headerlink" title="Edition Recant"></a>Edition Recant</h3><ul>
+<li><code>Head</code> stands for the current edition</li>
+<li><code>git reset --hard [version]</code> to recant to any edition</li>
+<li><code>git reflog</code> to search the logged editions.</li>
+</ul>
+<h3 id="Stage-and-Working-Directory"><a href="#Stage-and-Working-Directory" class="headerlink" title="Stage and Working Directory"></a>Stage and Working Directory</h3><h3 id="image-20200806204821364-Users-boyang-Library-Application-Support-typora-user-images-image-20200806204821364-png"><a href="#image-20200806204821364-Users-boyang-Library-Application-Support-typora-user-images-image-20200806204821364-png" class="headerlink" title="![image-20200806204821364](/Users/boyang/Library/Application Support/typora-user-images/image-20200806204821364.png)"></a>![image-20200806204821364](/Users/boyang/Library/Application Support/typora-user-images/image-20200806204821364.png)</h3><h3 id="Restore"><a href="#Restore" class="headerlink" title="Restore"></a>Restore</h3><p>In the new version of Git, <code>checkout</code> and <code>reset</code> is combined in <code>restore</code> </p>
+<ul>
+<li><code>git restore &lt;filename&gt;</code> from stage to working tree</li>
+<li><code>git restore -- staged &lt;filename&gt;</code> from master to stage  * equals <code>git reset</code></li>
+</ul>
+<h3 id="Delete-files"><a href="#Delete-files" class="headerlink" title="Delete files"></a>Delete files</h3><p><code>git rm</code> to remove the file from repository</p>
+</li>
+</ul>
+<h2 id="Remote-settings"><a href="#Remote-settings" class="headerlink" title="Remote settings"></a>Remote settings</h2><ul>
+<li><p>Add remote repository </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:&lt;github_account&gt;&#x2F;&lt;repository&gt;.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>First push</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Later push</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Clone</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:&lt;github_account&gt;&#x2F;&lt;repository&gt;.git</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="Branch"><a href="#Branch" class="headerlink" title="Branch"></a>Branch</h2><ul>
+<li><p>Switch branches</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git switch &lt;branch&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Fast mode vs Normal mode</p>
+<p>Fast mode: move the pointer on the tree</p>
+<p>Normal mode: add new commit to the merged tree</p>
+</li>
+<li><p>Store the uncommited work</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git stash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Merge one commit</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-pick &lt;commit&gt;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/08/17/learning-git/" data-id="ckdy2di4u0000v2x5asnmadum" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/17/learning-git/">git</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
